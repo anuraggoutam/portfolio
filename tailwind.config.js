@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         nav: 'rgba(0,0,0,0.3)',
+        text: '#ededed',
+        bg: '#081b29',
       },
       spacing: {
         t: '0.7rem',
@@ -18,6 +20,21 @@ export default {
       },
       borderRadius: {
         sml: '3rem',
+        hf: '50px',
+      },
+      fontFamily: {
+        momo: 'Montserrat',
+      },
+      screens: {
+        smx: { max: '639px' },
+      },
+      animation: {
+        showRight: '1s ease forwards',
+      },
+      keyframes: {
+        showRight: {
+          '100%': { width: 0 },
+        },
       },
     },
   },

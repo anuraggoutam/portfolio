@@ -1,3 +1,9 @@
 export default function Testimonials() {
-  return <div>Testimonials</div>;
+  return (
+    <>
+      <section id="testimonials">
+        testimonials
+      </section>
+    </>
+  );
 }
