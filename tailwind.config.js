@@ -12,17 +12,20 @@ export default {
       spacing: {
         t: '0.7rem',
         b: '1.7rem',
-        bottom: '8%',
+        R10: '10%',
+        btn: '21.5625rem',
       },
       zIndex: {
         2: '2',
+        n: '-1',
+        p: '1',
       },
       translate: {
         '50%': '50%',
       },
       borderRadius: {
         sml: '3rem',
-        hf: '50px',
+        ff: '3.125rem',
       },
       fontFamily: {
         momo: 'Montserrat',
@@ -38,16 +41,8 @@ export default {
           '100%': { width: 0 },
         },
       },
-      backgroundImage: {
-        hero: "url('home.jpg')",
-      },
-      fontSize: {
-        h1: [
-          '12rem',
-          {
-            lineHeight: '10rem',
-          },
-        ],
+      maxWidth: {
+        text: '37.5rem',
       },
     },
   },

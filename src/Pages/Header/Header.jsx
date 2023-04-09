@@ -1,22 +1,15 @@
 import './Header.css';
 import { useState } from 'react';
-import { CiFacebook } from 'react-icons/ci';
-import { IoLogoInstagram } from 'react-icons/io';
-import { AiOutlineLinkedin } from 'react-icons/ai';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Header() {
   const [activeNav, seActive] = useState();
   return (
-    <header>
-      <section
-        id="header"
-        className="h-screen bg-cover bg-no-repeat bg-center smx:bg-right-bottom relative py-5 px-8"
-      >
-        <div className="top-0 left-0 w-full  flex justify-between items-center z-50 ">
+    <>
+      <section id="header">
+        <header className="top-0 left-0 w-full  flex justify-between items-center z-50 py-5 px-8 fixed">
           <a
             href="#"
-            className="logo relative text-3xl text-text no-underline font-semibold "
+            className="logo relative text-3xl text-text no-underline font-semibold before:absolute before:w-full  before:h-full before:bg-bg before:top-0 before:right-0"
           >
             Lakshay.
           </a>
@@ -79,54 +72,61 @@ export default function Header() {
               Contact
             </a>
           </nav>
-        </div>
-        <div className="text-box pl-3 p  text-text absolute bottom-bottom">
-          <p className="text-5xl font-semibold">I'M</p>
-          <h1 className="text-h1 -ml-3 text-transparent h1s ">LAKSHAY</h1>
-          <h3 className="text-4xl font-medium">
-            I HELP COMPANIES MAKE A BEUTIFUL ADVERTISE
-          </h3>
-          <div className="row flex items-center flex-wrap mt-8 py-5">
+        </header>
+      </section>
+      <section
+        id="home"
+        className="home h-screen flex bg-cover bg-center items-center py-0 px-R10"
+      >
+        <div className="home-content max-w-text smx:bg-right-bottom ">
+          <h1
+            className="text-6xl font-bold
+          "
+          >
+            Hi, I'm Lakshay Verma
+          </h1>
+          <h3 className="text-4xl font-bold  text-blue">Graphic Designer</h3>
+          <p className="text-xl mt-5 mx-0 mb-10">
+            "Unleashing the Power of Creativity"
+          </p>
+          <div className="btn-box w-btn flex justify-between h-12 ">
             <a
-              href=""
-              className="text-text no-underline px-5 py-3 mr-5 border-solid border-white border-2"
+              href="#"
+              className="relative inline-flex items-center justify-center w-36 h-full bg-blue border-2 border-solid border-blue rounded-lg text-xl text-bg font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full"
             >
-              Explore My Portfolio
+              Hire Me
             </a>
             <a
               href=""
-              className="text-text no-underline px-5 py-3 mr-5 border-solid border-white border-2 flex items-center mb-3 "
+              className="relative inline-flex items-center justify-center w-36 h-full bg-transparent border-2 border-solid border-blue rounded-lg text-xl text-blue font-semibold tracking-wide no-underline z-p overflow-hidden before:w-0  before:absolute before:top-0 before:left-0 before:bg-blue before:h-full before:z-n hover:text-bg hover:before:w-full"
             >
-              Connect With Me
-              <ArrowForwardIcon />
+              Let's Talk
             </a>
-            <span className="text-2xl ml-1 ">
-              You Can Explore More About My Portfoilo And<br></br>Personal Life
-              Experiences Here.
-            </span>
+          </div>
+          <div className="home-sci absolute bottom-10 w-44 flex justify-between smx:bottom-12">
+            <a
+              href="#"
+              className="relative inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-solid border-blue rounded-ff text-xl no-underline text-blue z-p overflow-hidden hover:text-bg before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-blue before:z-n hover:before:w-full"
+            >
+              <i className="bx bxl-facebook"></i>
+            </a>
+            <a
+              href="#"
+              className="relative inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-solid border-blue rounded-ff text-xl no-underline text-blue z-p overflow-hidden  hover:text-bg
+              before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-blue before:z-n hover:before:w-full"
+            >
+              <i className="bx bxl-instagram"></i>
+            </a>
+            <a
+              href="#"
+              className="relative inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-solid border-blue rounded-ff text-xl no-underline text-blue z-p overflow-hidden  hover:text-bg
+              before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-blue before:z-n hover:before:w-full"
+            >
+              <i className="bx bxl-linkedin"></i>
+            </a>
           </div>
         </div>
-        <div className="social-icons absolute right-11 bottom-6">
-          <a
-            href=""
-            className="w-6 block my-6 mx-2 text-4xl hover:bg-transparent hover:text-blue hover:opacity-15"
-          >
-            <CiFacebook />
-          </a>
-          <a
-            href=""
-            className="w-6 block my-6 mx-2 text-4xl hover:bg-transparent hover:text-blue hover:opacity-15"
-          >
-            <IoLogoInstagram />
-          </a>
-          <a
-            href=""
-            className="w-6 block my-6 mx-2 text-4xl hover:bg-transparent hover:text-blue hover:opacity-15"
-          >
-            <AiOutlineLinkedin />
-          </a>
-        </div>
       </section>
-    </header>
+    </>
   );
 }
