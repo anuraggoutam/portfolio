@@ -7,10 +7,12 @@ export default {
         nav: 'rgba(0,0,0,0.3)',
         text: '#ededed',
         bg: '#081b29',
+        blue: ' #00abf0',
       },
       spacing: {
         t: '0.7rem',
         b: '1.7rem',
+        bottom: '8%',
       },
       zIndex: {
         2: '2',
@@ -35,6 +37,17 @@ export default {
         showRight: {
           '100%': { width: 0 },
         },
+      },
+      backgroundImage: {
+        hero: "url('home.jpg')",
+      },
+      fontSize: {
+        h1: [
+          '12rem',
+          {
+            lineHeight: '10rem',
+          },
+        ],
       },
     },
   },

@@ -11,12 +11,8 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Poppins', 'sans-serif';
-
 }
 
-#header {
-  height: 100vh;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +23,7 @@ html {
 
 body {
   color: #ededed;
-  background-color: #081b29;
+  /* background-color: #081b29; */
 }
 
 /* nav {
