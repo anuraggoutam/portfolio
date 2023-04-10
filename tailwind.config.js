@@ -4,16 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        nav: 'rgba(0,0,0,0.3)',
+        nav: 'rgba(0,0,0,0.1)',
         text: '#ededed',
         bg: '#081b29',
         blue: ' #00abf0',
+        light: ' rgba(255, 255, 255, 0.6)',
       },
       spacing: {
         t: '0.7rem',
         b: '1.7rem',
         R10: '10%',
         btn: '21.5625rem',
+        66: '120px',
       },
       zIndex: {
         2: '2',
@@ -26,6 +28,7 @@ export default {
       borderRadius: {
         sml: '3rem',
         ff: '3.125rem',
+        f50: '50%',
       },
       fontFamily: {
         momo: 'Montserrat',

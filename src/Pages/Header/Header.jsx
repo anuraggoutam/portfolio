@@ -5,7 +5,7 @@ export default function Header() {
   const [activeNav, seActive] = useState();
   return (
     <>
-      <section id="header">
+      <section id="home">
         <header className="top-0 left-0 w-full  flex justify-between items-center z-50 py-5 px-8 fixed">
           <a
             href="#"
@@ -73,14 +73,17 @@ export default function Header() {
             </a>
           </nav>
         </header>
+        <a
+          href="#contact"
+          className="absolute -right-9 bottom-66 rotate-90 font-extralight text-sm text-text mr-8 p-5 smx:hidden"
+        >
+          Scroll Down
+        </a>
       </section>
-      <section
-        id="home"
-        className="home h-screen flex bg-cover bg-center items-center py-0 px-R10"
-      >
-        <div className="home-content max-w-text smx:bg-right-bottom ">
+      <section className="home h-screen flex bg-cover bg-center items-center py-0 px-R10 smx:bg-right-bottom ">
+        <div className="home-content max-w-text  smx:mt-12">
           <h1
-            className="text-6xl font-bold
+            className="text-6xl font-bold smx:font-medium
           "
           >
             Hi, I'm Lakshay Verma
@@ -103,7 +106,7 @@ export default function Header() {
               Let's Talk
             </a>
           </div>
-          <div className="home-sci absolute bottom-10 w-44 flex justify-between smx:bottom-12">
+          <div className="home-sci absolute bottom-66 w-44 flex justify-between smx:hidden">
             <a
               href="#"
               className="relative inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-solid border-blue rounded-ff text-xl no-underline text-blue z-p overflow-hidden hover:text-bg before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:bg-blue before:z-n hover:before:w-full"

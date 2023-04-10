@@ -1,7 +1,3 @@
-
-
 export default function Conatct() {
-  return (
-    <div>Conatct</div>
-  )
+  return <section id="contact"></section>;
 }

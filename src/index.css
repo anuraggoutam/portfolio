@@ -44,7 +44,7 @@ body {
   backdrop-filter: blur(15px);
   transform: translateX(-50%);
 }
-
+/* 
 .nav a {
   padding: 0.9rem;
   display: flex;
@@ -60,4 +60,4 @@ nav a:hover {
 
 nav a.active {
   color: #fff;
-}
+} */
