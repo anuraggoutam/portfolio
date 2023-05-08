@@ -5,10 +5,6 @@
     url('home.jpg');
 }
 
-.logo::before {
-  animation: showRight 1s ease forwards;
-  animation-delay: 0.4s;
-}
 .navbar a {
   background: transparent;
   transition: 0.3s;
@@ -21,6 +17,8 @@
 }
 .navbar a.active {
   color: #00abf0;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .btn-box a {
@@ -52,12 +50,6 @@
 @keyframes back {
   100% {
     background-position: 2000px 0;
-  }
-}
-
-@keyframes showRight {
-  100% {
-    width: 0;
   }
 }
 

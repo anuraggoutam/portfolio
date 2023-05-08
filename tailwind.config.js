@@ -4,11 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        nav: 'rgba(0,0,0,0.1)',
+        nav: 'rgba(0,0,0,0.3)',
+        nav2: 'rgba(0,0,0,0.6)',
         text: '#ededed',
         bg: '#081b29',
         blue: ' #00abf0',
         light: ' rgba(255, 255, 255, 0.6)',
+        fullbg: 'rgb(25, 26, 28)',
       },
       spacing: {
         t: '0.7rem',
@@ -16,6 +18,10 @@ export default {
         R10: '10%',
         btn: '21.5625rem',
         66: '120px',
+        500: '550px',
+        420: '420px',
+        320: '320px',
+        1130: '1130px',
       },
       zIndex: {
         2: '2',
@@ -35,6 +41,7 @@ export default {
       },
       screens: {
         smx: { max: '639px' },
+        tablet: { max: '1076px' },
       },
       animation: {
         showRight: '1s ease forwards',

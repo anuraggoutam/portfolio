@@ -3,13 +3,28 @@ import { useState } from 'react';
 
 export default function Header() {
   const [activeNav, seActive] = useState();
+  const [color, setClick] = useState();
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setClick(true);
+    } else {
+      setClick(false);
+    }
+  };
+  window.addEventListener('scroll', changeColor);
   return (
     <>
       <section id="home">
-        <header className="top-0 left-0 w-full  flex justify-between items-center z-50 py-5 px-8 fixed">
+        <header
+          className={
+            color
+              ? 'top-0 left-0 w-full h-20 flex justify-between items-center z-50 py-5 px-8 fixed bg-nav2'
+              : 'top-0 left-0 w-full h-20 flex justify-between items-center z-50 py-5 px-8 fixed bg-transparent'
+          }
+        >
           <a
             href="#"
-            className="logo relative text-3xl text-text no-underline font-semibold before:absolute before:w-full  before:h-full before:bg-bg before:top-0 before:right-0"
+            className="logo relative text-3xl text-text no-underline font-semibold "
           >
             Lakshay.
           </a>
@@ -18,7 +33,7 @@ export default function Header() {
               href="#"
               // className="active text-lg text-text no-underline font-medium ml-9 mr-1 "
               className={
-                activeNav === '#about'
+                activeNav === '#'
                   ? 'active  text-lg text-text no-underline font-medium ml-9 mr-1'
                   : ' text-lg text-text no-underline font-medium ml-9 mr-1'
               }
@@ -28,20 +43,20 @@ export default function Header() {
             </a>
             <a
               href="#about"
-              onClick={() => seActive('#about')}
               // className="active text-lg text-text no-underline font-medium ml-9 mr-1"
               className={
-                activeNav === '#about '
+                activeNav === '#about'
                   ? 'active text-lg text-text no-underline font-medium ml-9 mr-1'
                   : ' text-lg text-text no-underline font-medium ml-9 mr-1'
               }
+              onClick={() => seActive('#about')}
             >
               About
             </a>
             <a
               href="#services"
               className={
-                activeNav === '#services '
+                activeNav === '#services'
                   ? 'active text-lg text-text no-underline font-medium ml-9 mr-1'
                   : 'text-lg text-text no-underline font-medium ml-9 mr-1'
               }
@@ -52,7 +67,7 @@ export default function Header() {
             <a
               href="#portfolio"
               className={
-                activeNav === '#portfolio '
+                activeNav === '#portfolio'
                   ? 'active text-lg text-text no-underline font-medium ml-9 mr-1'
                   : ' text-lg text-text no-underline font-medium ml-9 mr-1'
               }
@@ -63,7 +78,7 @@ export default function Header() {
             <a
               href="#contact"
               className={
-                activeNav === '#contact '
+                activeNav === '#contact'
                   ? 'active text-lg text-text no-underline font-medium ml-9 mr-1'
                   : 'text-lg text-text no-underline font-medium ml-9 mr-5'
               }
@@ -81,27 +96,29 @@ export default function Header() {
         </a>
       </section>
       <section className="home h-screen flex bg-cover bg-center items-center py-0 px-R10 smx:bg-right-bottom ">
-        <div className="home-content max-w-text  smx:mt-12">
+        <div className="home-content max-w-text  smx:mt-36">
           <h1
-            className="text-6xl font-bold smx:font-medium
+            className="text-6xl font-bold smx:font-medium  smx:text-4xl
           "
           >
             Hi, I'm Lakshay Verma
           </h1>
-          <h3 className="text-4xl font-bold  text-blue">Graphic Designer</h3>
+          <h3 className="text-4xl font-bold  text-blue smx:mr-6 smx:text-2xl">
+            Graphic Designer
+          </h3>
           <p className="text-xl mt-5 mx-0 mb-10">
             "Unleashing the Power of Creativity"
           </p>
-          <div className="btn-box w-btn flex justify-between h-12 ">
+          <div className="btn-box w-btn flex justify-between h-12">
             <a
               href="#"
-              className="relative inline-flex items-center justify-center w-36 h-full bg-blue border-2 border-solid border-blue rounded-lg text-xl text-bg font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full"
+              className="relative inline-flex items-center justify-center w-36 smx:w-32 h-full bg-blue border-2 border-solid border-blue rounded-lg text-xl text-bg font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full "
             >
               Hire Me
             </a>
             <a
               href=""
-              className="relative inline-flex items-center justify-center w-36 h-full bg-transparent border-2 border-solid border-blue rounded-lg text-xl text-blue font-semibold tracking-wide no-underline z-p overflow-hidden before:w-0  before:absolute before:top-0 before:left-0 before:bg-blue before:h-full before:z-n hover:text-bg hover:before:w-full"
+              className="relative inline-flex items-center justify-center w-36 smx:w-32 h-full bg-transparent border-2 border-solid border-blue rounded-lg text-xl text-blue font-semibold tracking-wide no-underline z-p overflow-hidden before:w-0  before:absolute before:top-0 before:left-0 before:bg-blue before:h-full before:z-n hover:text-bg hover:before:w-full smx:right-16"
             >
               Let's Talk
             </a>

@@ -61,3 +61,17 @@ nav a:hover {
 nav a.active {
   color: #fff;
 } */
+
+.bright {
+}
+
+.bright {
+  background: transparent;
+  transition: 0.3s;
+}
+
+.bright:hover {
+  color: white;
+  background-color: transparent;
+  opacity: 2;
+}

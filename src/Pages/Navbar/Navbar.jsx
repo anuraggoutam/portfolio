@@ -8,16 +8,16 @@ export default function Navbar() {
   return (
     <section id="Navbar" className="hidden smx:block ">
       <nav
-        className="bg-nav  p-6 z-2 flex left-1/2 
-         bottom-8 gap-7 rounded-sml BCD -translate-x-1/2 fixed "
+        className="bg-nav max-w-max p-6 z-2 flex left-1/2 
+         bottom-6 gap-4 rounded-sml BCD -translate-x-1/2 fixed Z-n"
       >
         <a
           href="#"
           onClick={() => seActive('#home')}
           className={
             activeNav === '#home'
-              ? 'active bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
-              : 'bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav '
+              ? 'active bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
+              : 'bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav '
           }
         >
           <AiOutlineHome />
@@ -27,8 +27,8 @@ export default function Navbar() {
           onClick={() => seActive('#about')}
           className={
             activeNav === '#about'
-              ? 'active bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
-              : 'bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
+              ? 'active bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
+              : 'bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
           }
         >
           <AiOutlineUser />
@@ -38,8 +38,8 @@ export default function Navbar() {
           onClick={() => seActive('#experiance')}
           className={
             activeNav === '#experiance'
-              ? 'active bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
-              : 'bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
+              ? 'active bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
+              : 'bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
           }
         >
           <BiBook />
@@ -49,8 +49,8 @@ export default function Navbar() {
           onClick={() => seActive('#services')}
           className={
             activeNav === '#services'
-              ? 'active bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
-              : 'bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
+              ? 'active bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
+              : 'bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
           }
         >
           <RiServiceLine />
@@ -60,8 +60,8 @@ export default function Navbar() {
           onClick={() => seActive('#contact')}
           className={
             activeNav === ''
-              ? 'active bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
-              : ' bg-transparent p-4 rounded-f50 flex text-light text-lg hover:bg-nav'
+              ? 'active bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
+              : ' bg-transparent p-2 rounded-f50 flex text-light text-lg hover:bg-nav'
           }
         >
           <BiMessageSquareDetail />
