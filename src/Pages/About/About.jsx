@@ -1,10 +1,7 @@
 export default function About() {
   return (
     <>
-      <section
-        id="about"
-        className="about w-full py-20 px-0 bg-fullbg  h-screen"
-      >
+      <section id="about" className="about w-full py-20 px-0   h-screen">
         <div className="main w-11/12 max-w-screen-xl flex smx:flex-col my-10 mx-auto items-center justify-around gap-4 mt-36 tablet:flex-col">
           <img
             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80"
