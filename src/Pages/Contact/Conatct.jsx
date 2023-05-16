@@ -2,37 +2,73 @@ import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { RiMessengerLine } from 'react-icons/ri';
 import { SiWhatsapp } from 'react-icons/si';
 
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 export default function Conatct() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ji2uobx',
+        'template_tl05bjh',
+        form.current,
+        '1erahzxKz2nanFIid'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <section id="contact" className="w-full  h-screen pt-36">
+    <section id="contact" className="w-full  pt-36">
       <div className="text-center">
-        <h5 className="text-2xl font-semibold">Get in Touch</h5>
+        <h5 className="text-2xl font-semibold">
+          Let's <span className="text-blue ">Talk</span>
+        </h5>
         <h2 className="text-lg pb-6 text-blue font-medium">Contact Me</h2>
       </div>
-      <div className="container contact_container w-3/5 flex items-center justify-center gap-12">
-        <div className="contact_options pl-32">
-          <article className="contact_option">
-            <MdOutlineMarkEmailRead />
+      <div className="contact_container container flex gap-we ml-10 justify-center smx:flex-col smx:m-0 smx:p-10">
+        <div className="contact_options flex flex-col gap-5">
+          <article className="contact_option flex flex-col justify-center items-center bg-bg2 p-5 rounded-2xl text-center border-2 border-solid border-transparent hover:bg-transparent hover:border-blue">
+            <MdOutlineMarkEmailRead className="text-2xl mb-2" />
             <h4>Email</h4>
-            <h5>anuraggoutam01@gmail.com</h5>
-            <a href="mailto:anuraggoutam01@gmail.com" target="_blank">
+            <h5>anuraggoutam01 @gmail.com</h5>
+            <a
+              href="mailto:anuraggoutam01@gmail.com"
+              className="mt-3 inline-block text-sm text-blue"
+              target="_blank"
+            >
               Send a messsage
             </a>
           </article>
-          <article className="contact_option">
-            <RiMessengerLine />
+          <article className="contact_option flex flex-col justify-center items-center bg-bg2  p-5 rounded-2xl text-center border-2 border-solid border-transparent hover:bg-transparent hover:border-blue">
+            <RiMessengerLine className="text-2xl mb-2" />
             <h4>Messenger</h4>
             <h5>Anurag Goutam</h5>
-            <a href="https://m.me/anurag.goutam.752" target="_blank">
+            <a
+              href="https://m.me/anurag.goutam.752"
+              className="mt-3 inline-block text-sm text-blue"
+              target="_blank"
+            >
               Send a messsage
             </a>
           </article>
-          <article className="contact_option">
-            <SiWhatsapp />
+          <article className="contact_option flex flex-col justify-center items-center bg-bg2 p-5 rounded-2xl text-center border-2 border-solid border-transparent hover:bg-transparent hover:border-blue ">
+            <SiWhatsapp className="text-2xl mb-2" />
             <h4>WhatsApp</h4>
             <h5>+12345678</h5>
             <a
               href="https://api.whatsapp.com/send?phone=+917303372170"
+              className="mt-3 inline-block text-sm text-blue"
               target="_blank"
             >
               Send a messsage
@@ -40,23 +76,31 @@ export default function Conatct() {
           </article>
         </div>
         {/* end of other contact option */}
-        <form action="" className="flex flex-col">
+        <form ref={form} className="flex flex-col gap-5 " onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
+            className="w-full p-6 rounded-lg bg-transparent border-2 border-solid border-bg2 resize-none"
             placeholder="Your Full Name"
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            className="w-full p-6 rounded-lg bg-transparent border-2 border-solid border-bg2 resize-none"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
           <textarea
             name="message"
             rows="7"
+            className="w-full p-6 rounded-lg bg-transparent border-2 border-solid border-bg2 resize-none "
             placeholder="Your Message"
             required
           />
           <button
             type="submit"
-            className="relative inline-flex p-7 text-text items-center justify-center w-48 h-11 bg-blue border-2 smx:ml-5 border-solid border-blue rounded-lg text-xl font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full smx:w-28 smx:h-10 smx:bottom-3"
+            className="w-max inline-block bg-blue py-3 text-bg px-5 border-solid border-blue border-2 rounded-lg cursor-pointer g hover:bg-white hover:text-blue hover:border-transparent "
           >
             Send Message
           </button>

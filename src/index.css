@@ -26,6 +26,19 @@ body {
   background-color: rgb(25, 26, 28);
 }
 
+.g {
+  transition: all 400ms ease;
+}
+
+nav a.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.service_box:hover {
+  background: linear-gradient(90deg, #f61b10, #f61b10, #ef0963);
+}
+
 /* nav {
   background: rgba(0, 0, 0, 0.3);
   width: max-content;
@@ -63,9 +76,6 @@ nav a.active {
 } */
 
 .bright {
-}
-
-.bright {
   background: transparent;
   transition: 0.3s;
 }
@@ -74,4 +84,7 @@ nav a.active {
   color: white;
   background-color: transparent;
   opacity: 2;
+}
+.bb {
+  border-left: 2px solid #bababa;
 }

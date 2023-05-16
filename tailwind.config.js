@@ -2,15 +2,23 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      mans: 'helvetica',
+      hel:"helvetica"
+    },
     extend: {
       colors: {
         nav: 'rgba(0,0,0,0.3)',
         nav2: 'rgba(0,0,0,0.6)',
+        bg2: 'rgba(0,0,0,0.9)',
         text: '#ededed',
         bg: '#081b29',
         blue: ' #00abf0',
+        blue2: 'rgba(0, 171, 240, 0.8)',
+
         light: ' rgba(255, 255, 255, 0.6)',
         fullbg: 'rgb(25, 26, 28)',
+        reded: '#f61b10',
       },
       spacing: {
         t: '0.7rem',
@@ -22,6 +30,8 @@ export default {
         420: '420px',
         320: '320px',
         1130: '1130px',
+        58: '58%',
+        we: '12%',
       },
       zIndex: {
         2: '2',
@@ -35,6 +45,7 @@ export default {
         sml: '3rem',
         ff: '3.125rem',
         f50: '50%',
+        1: 1,
       },
       fontFamily: {
         momo: 'Montserrat',
