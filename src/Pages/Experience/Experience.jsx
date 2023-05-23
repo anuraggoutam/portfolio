@@ -2,12 +2,12 @@ export default function Experience() {
   return (
     <section
       id="experiance"
-      className="w-full min-h-full flex justify-center items-center"
+      className="w-full min-h-full flex justify-center items-center smx:-mt-32"
     >
       <div className=" w-full py-9 px-3 smx:px-5 pr-[calc[10%-32px]]">
         <div className="row grid grid-cols-2 gap-5 smx:grid-cols-1">
           {/*  education section starts */}
-          <div className="col tablet:mt-7">
+          <div className="col tablet:mt-12">
             <header className="title font-mans text-blue mb-2">
               <h2 className="font-semibold">EDUACTION</h2>
             </header>

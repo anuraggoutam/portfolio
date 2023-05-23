@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: {
       mans: 'helvetica',
-      hel:"helvetica"
+      hel: 'helvetica',
     },
     extend: {
       colors: {
@@ -53,6 +53,7 @@ export default {
       screens: {
         smx: { max: '639px' },
         tablet: { max: '1076px' },
+        mid: { min: '1076px' },
       },
       animation: {
         showRight: '1s ease forwards',

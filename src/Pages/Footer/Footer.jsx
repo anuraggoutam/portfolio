@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <footer className="bg-blue text-bg py-12 px-0 text-sm mt-28 text-center">
         <a href="Lalshay" className="text-4xl font-medium mb-8 inline-block ">
-          Lakshay
+          Lakshay !
         </a>
         <ul className="flex flex-wrap justify-center gap-8 mt-0 my-auto mb-12 smx:flex-col smx:gap-5">
           <li>
