@@ -18,7 +18,7 @@ export default function Header() {
         <header
           className={
             color
-              ? 'top-0 left-0 w-full h-20 flex justify-between items-center z-50 py-5 px-8 fixed bg-nav2'
+              ? 'top-0 left-0 w-full h-20 flex justify-between items-center z-50 py-5 px-8 fixed bg-nav2 tablet:gap-12'
               : 'top-0 left-0 w-full h-20 flex justify-between items-center z-50 py-5 px-8 fixed bg-transparent'
           }
         >
@@ -95,7 +95,7 @@ export default function Header() {
           Scroll Down
         </a>
       </section>
-      <section className="home h-screen flex bg-cover bg-center items-center py-0 px-R10 smx:bg-right-bottom ">
+      <section className="home h-screen w-full flex bg-cover bg-center items-center py-0 px-R10 smx:bg-right-bottom ">
         <div className="home-content max-w-text  smx:mt-36">
           <h1
             className="text-6xl font-bold smx:font-medium  smx:text-4xl
@@ -112,7 +112,7 @@ export default function Header() {
           <div className="btn-box w-btn flex justify-between h-12">
             <a
               href="#"
-              className="relative inline-flex items-center justify-center w-36 smx:w-32 h-full bg-blue border-2 border-solid border-blue rounded-lg text-xl text-bg font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full "
+              className="relative inline-flex items-center justify-center w-36 smx:w-32 h-full bg-blue border-2 border-solid border-blue rounded-lg text-xl text-bg font-semibold tracking-wide no-underline z-p overflow-hidden before:absolute before:top-0 before:w-0 before:left-0 before:bg-bg before:h-full before:z-n  hover:text-blue hover:before:w-full"
             >
               Hire Me
             </a>

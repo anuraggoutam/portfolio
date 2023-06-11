@@ -1,9 +1,14 @@
+import { useState } from 'react';
+import './Model.css';
+import { ImgComparisonSlider } from '@img-comparison-slider/react';
+
 const data = [
   {
     id: 1,
     title: 'papa',
     link: 'hkkjbkjn',
     photo: 'http://',
+    photo1: '',
     para: 'jhvhjbhkbbn',
   },
   {
@@ -58,6 +63,16 @@ const data = [
 ];
 
 export default function Portfolio() {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+  if (modal) {
+    document.body.classList.add('active-modal');
+  } else {
+    document.body.classList.remove('active-modal');
+  }
   return (
     <section id="portfolio">
       <h5 className="mb-2 text-center mt-24 text-xl ">My Recent Work</h5>
@@ -67,10 +82,10 @@ export default function Portfolio() {
       <div className="portfolio_container  flex flex-wrap pl-0 gap-[3%]  justify-center items-center ">
         {data.map(({ id, title, link, photo, para }) => {
           return (
-            <div className="relative flex w-96 flex-col rounded-xl bg-bg2 bg-clip-border text-text shadow-md -p-2 mb-10  tablet:ml-12 tablet:w-[60%] ">
+            <div className="relative flex w-96 flex-col rounded-xl bg-bg2 bg-clip-border text-text shadow-md -p-2 mb-10  tablet:ml-12   ">
               <div className="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 border-2 border-solid border-transparent hover:bg-transparent hover:border-blue">
                 <img
-                  src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                  src="https://images.unsplash.com/photo-1685988755120-f0da7b70b3c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
                   alt="img-blur-shadow"
                   layout="fill"
                 />
@@ -87,12 +102,50 @@ export default function Portfolio() {
               </div>
               <div className="p-6 pt-0">
                 <button
-                  className="bg-blue text-white no-underline border-2 border-solid border-transparent font-bold py-2 px-7 rounded-3xl g hover:bg-transparent hover:border-2 hover:border-solid hover:border-blue hover:cursor-pointer "
+                  className="bg-blue text-white no-underline border-2 border-solid border-transparent font-bold py-2 px-7 rounded-3xl g hover:bg-transparent hover:border-2 hover:border-solid hover:border-blue hover:cursor-pointer btn-model "
                   type="button"
                   data-ripple-light="true"
+                  onClick={toggleModal}
                 >
-                  Read More
+                  Live View
                 </button>
+                {modal && (
+                  <div className=" w-screen h-screen top-0 left-0 right-0 bottom-0 fixed ">
+                    <div
+                      onClick={toggleModal}
+                      className="w-screen h-screen top-0 left-0 right-0 bottom-0 fixed "
+                    ></div>
+                    <div className="modal-content absolute top-1/2 left-1/2  rounded-xl border-2  border-f50 bg-bg2 ">
+                      <div className="text-center">
+                        <h2 className="text-4xl text-blue mt-2 -mb-6 smx:text-2xl">
+                          <span className="text-white">Lets</span> Compare
+                        </h2>
+                        <h5 className="text-xl mt-4 mb-6 smx:text-lg smx:mb-2">
+                          US<span className="text-2xl text-blue">!</span>{' '}
+                        </h5>
+                      </div>
+
+                      <button
+                        className="absolute top-3 right-4 cursor-pointer border-2 bg-red-600 text-xl font-bold border-solid rounded-f50 px-2 text-white"
+                        onClick={toggleModal}
+                      >
+                        X
+                      </button>
+                      <div className="w-full h-full tablet:w-[800px] ">
+                        <ImgComparisonSlider className="slider-example-slpit-line mb-10">
+                          <img
+                            slot="first"
+                            src="https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                          />
+                          <img
+                            slot="second"
+                            src="https://img-comparison-slider.sneas.io/demo/images/after.webp"
+                          />
+                        </ImgComparisonSlider>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           );

@@ -2,7 +2,7 @@ export default function Experience() {
   return (
     <section
       id="experiance"
-      className="w-full min-h-full flex justify-center items-center smx:-mt-32"
+      className="w-full min-h-full flex justify-center items-center smx:-mt-32 ml-10 mr-10"
     >
       <div className=" w-full py-9 px-3 smx:px-5 pr-[calc[10%-32px]]">
         <div className="row grid grid-cols-2 gap-5 smx:grid-cols-1">
